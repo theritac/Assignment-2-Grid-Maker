@@ -2,10 +2,30 @@
 let numRows = 0;
 let numCols = 0;
 let colorSelected; 
+const grid = document.getElementById("grid");
+const all_cells = grid.getElementsByTagName("td");
 
 // Add a row
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+    let row = grid.insertRow(-1);
+    row.setAttribute("row", numRows+1);
+
+    //No current cells exist, just create one cell
+    if (numCols == 0) {
+        let cell = row.insertCell(-1);
+        cell.setAttribute("row", numRows+1);
+        cell.setAttribute("col", numCols+1);
+        numCols++;
+    } else { //Some columns exist, create however many cells are in each row in a new row
+        for (let i=0;i<numCols;i++) {
+            let cell = row.insertCell();
+            cell.setAttribute("row", numRows+1);
+            cell.setAttribute("col", i+1);
+        }
+    }
+    
+    //Inrease counter
+    numRows++;
 }
 
 // Add a column
