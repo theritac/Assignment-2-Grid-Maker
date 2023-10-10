@@ -30,7 +30,25 @@ function addR() {
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+//Cells didn't previously exist
+if (numRows == 0) {
+    let row = grid.insertRow(-1);
+    row.setAttribute("row", numRows+1);
+    let cell = row.insertCell();
+    cell.setAttribute("row", numRows+1);
+    cell.setAttribute("col", numCols+1);
+    numRows++;
+} else { //Rows existed, now add a cell at the end of each row
+    for (let i=0;i<numRows;i++) {
+        let row = grid.rows[i];
+        let cell = row.insertCell();
+        cell.setAttribute("row", i+1);
+        cell.setAttribute("col", numCols+1);
+    }
+}
+
+//Increase counter
+numCols++;
 }
 
 // Remove a row
