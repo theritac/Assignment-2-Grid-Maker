@@ -149,3 +149,19 @@ function fillClickedCell(row, col) {
         cell.style.backgroundColor = colorSelected;
     }
 }
+
+// Fill all uncolored cells
+function fillU(){
+    //colorSelected === "SELECT" is for if the user switches from a color back to the select option
+    //!colorSelected is for if the user never changed color in the first place aka undefined
+    if (colorSelected === "SELECT" || !colorSelected) {
+        alert("Select a color first!");
+    } else {
+        for (let i=0;i<all_cells.length;i++) {
+            let cell = all_cells[i];
+            if (cell.style.backgroundColor === "") {
+                cell.style.backgroundColor = colorSelected;
+            }
+        }
+    }
+}
