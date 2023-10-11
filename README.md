@@ -1,8 +1,12 @@
 # grid-maker-starter-code
-Rita Chen
-Michelle Thaung
-Arsen Tumanian
-Hnin Lwin
+### Team Members
+- Rita Chen (@theritac)
+- Arsen Tumanian (@arsent1)
+- Michelle Thaung (@michelle-thaung)
+- Hnin Lwin (@hninl23)
+
+### Live Link
+[Website link]()
 
 ----------
 ### 1. Use the following process to ***import*** the Assignment 3 starter code repository to your GitHub account as the starter codebase
