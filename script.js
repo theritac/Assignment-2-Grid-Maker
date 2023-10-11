@@ -113,7 +113,10 @@ function fillAll(){
     alert("Clicked Fill All"); // Replace this line with your code.
 }
 
-// Clear all cells
-function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+// Clear all cells' colors
+function clearAllColored(){
+    for (let i=0;i<all_cells.length;i++) {
+        let cell = all_cells[i];
+        cell.style.backgroundColor = "";
+    }
 }
