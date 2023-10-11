@@ -120,3 +120,19 @@ function clearAllColored(){
         cell.style.backgroundColor = "";
     }
 }
+
+// Clear the table
+function clearTable() {
+    if (numRows === 0) {
+        alert("Nothing to clear!");
+    }
+
+    while (numRows > 0) {
+        grid.deleteRow(-1);
+        numRows--;
+    }
+
+    numRows = 0;
+    //Also have to set numCols because only numRows decremented in the loop
+    numCols = 0;
+}
