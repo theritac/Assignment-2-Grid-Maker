@@ -27,5 +27,14 @@
     </table>
     <!-- Script -->
     <script src="script.js"></script>
+    <script>
+        // Add an event listener for the table for function to color that specific cell clicked
+        document.getElementById("grid").addEventListener("click", function(event) {
+            // Only will run it if a cell is clicked and no other table element
+            if (event.target.tagName == "TD") {
+                fillClickedCell(event.target.getAttribute("row"), event.target.getAttribute("col"))
+            }
+        });
+    </script>
 </body>
 </html>
