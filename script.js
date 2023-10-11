@@ -136,3 +136,16 @@ function clearTable() {
     //Also have to set numCols because only numRows decremented in the loop
     numCols = 0;
 }
+
+// Fill only the clicked cell
+function fillClickedCell(row, col) {
+    //colorSelected === "SELECT" is for if the user switches from a color back to the select option
+    //!colorSelected is for if the user never changed color in the first place aka undefined
+    if (colorSelected === "SELECT" || !colorSelected) {
+        alert("Select a color first!");
+    } else {
+        //Cell with the row and col data attributes
+        let cell = document.querySelector(`td[row="${row}"][col="${col}"]`);
+        cell.style.backgroundColor = colorSelected;
+    }
+}
