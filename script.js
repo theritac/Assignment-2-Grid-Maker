@@ -165,3 +165,17 @@ function fillU(){
         }
     }
 }
+
+// Fill all cells
+function fillAll(){
+    //colorSelected === "SELECT" is for if the user switches from a color back to the select option
+    //!colorSelected is for if the user never changed color in the first place aka undefined
+    if (colorSelected === "SELECT" || !colorSelected) {
+        alert("Select a color first!");
+    } else {
+        for (let i=0;i<all_cells.length;i++) {
+            let cell = all_cells[i];
+            cell.style.backgroundColor = colorSelected;
+        }
+    }
+}
