@@ -6,7 +6,7 @@
 - Hnin Lwin (@hninl23)
 
 ### Live Link
-[Website link]()
+[Website link](https://theritac.github.io/Assignment-2-Grid-Maker/)
 
 ----------
 ### 1. Use the following process to ***import*** the Assignment 3 starter code repository to your GitHub account as the starter codebase
